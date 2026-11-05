@@ -11,6 +11,10 @@ filled/instructor-script versions, quizzes, or WebAssign.
 - Don't interrupt. Work in the background: no pop-up windows, no apps brought to the
   front, no sound. In a browser, use one tab, read text instead of screenshots, mute
   and pause videos, and close your tabs at the end.
+- News is a distraction the user wants to cut back on (said 2026-11-05 after checking it
+  on the iPad mid-work). If they mention news, don't offer to look it up or summarize it.
+  Acknowledge it briefly and steer back to the current deck or task. Never bring up news
+  or headlines on your own. Look things up only if they explicitly ask for it.
 
 ## Courses
 - STAT 3411 (Devore, "Stat" folders) and MATH 3101 (Financial Math, "26Fa_FinancialMath").
