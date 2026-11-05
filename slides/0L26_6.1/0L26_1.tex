@@ -1,0 +1,147 @@
+\documentclass[12pt]{beamer}
+% ---------- doc 1 format: 12pt, lmodern serif, pale-blue title band, triangle bullets ----------
+\usepackage{lmodern}
+\usefonttheme{serif}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{lectureblue}{RGB}{0,70,150}
+\definecolor{paleblue}{RGB}{221,233,248}
+\definecolor{examplegreen}{RGB}{0,120,60}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}[triangle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamercolor{itemize item}{fg=lectureblue}
+\setbeamercolor{itemize subitem}{fg=lectureblue}
+\setbeamercolor{frametitle}{bg=paleblue,fg=black}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.6ex,dp=1.1ex,leftskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}}
+\setbeamercolor{title}{fg=lectureblue}
+\setbeamertemplate{footline}{\hfill\scriptsize\insertframenumber\hspace*{0.3cm}\vspace*{0.15cm}}
+
+\newcommand{\keyterm}[1]{\textcolor{examplegreen}{\textbf{#1}}}
+\newcommand{\fitO}{}
+\newcommand{\exlists}{\setlength{\itemsep}{0pt}}
+\newcommand{\ind}[1]{\hspace*{#1}}
+\newcommand{\Xbar}{\overline{X}}
+
+\newcommand{\thetahat}{\hat{\theta}}
+
+\title{Section 6.1}
+\subtitle{Point Estimation}
+\date{}
+
+\begin{document}
+
+% ======================================================================
+\begin{frame}
+\titlepage
+\end{frame}
+
+% ======================================================================
+\begin{frame}[t]{Point Estimation}
+\begin{itemize}
+\item Goal: use sample data to estimate an unknown parameter
+  \textcolor{magenta}{$\theta$} (for example $\mu$, $\sigma$ or $p$).
+\item[]
+\item A \keyterm{point estimate} of $\theta$ is a single number computed from the
+  \textbf{observed sample} $x_1,\dots,x_n$. It is a sensible value for $\theta$.
+\item A \keyterm{point estimator} \textcolor{magenta}{$\thetahat$} is the statistic used to get it.
+  It is computed from the \textbf{random sample} $X_1,\dots,X_n$, so it is a random variable.
+\item[]
+\item Example: $\textcolor{magenta}{\hat{\mu}}=\Xbar$ is an estimator of $\mu$;
+  $\bar{x}=12.4$ is an estimate.
+\item Different estimators can give different estimates, so we need criteria to choose one.
+\end{itemize}
+\end{frame}
+
+% ======================================================================
+\begin{frame}[t]{Common Point Estimators}
+\begin{center}
+\renewcommand{\arraystretch}{1.6}\setlength{\tabcolsep}{14pt}
+\begin{tabular}{lll}
+\toprule
+Parameter & Estimator & Estimate \\
+\midrule
+mean $\mu$            & $\hat{\mu}=\Xbar$         & $\bar{x}$ \\
+variance $\sigma^2$   & $\hat{\sigma}^2=S^2$      & $s^2$ \\
+standard deviation $\sigma$ & $\hat{\sigma}=S$    & $s$ \\
+proportion $p$        & $\hat{p}=X/n$             & $x/n$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+\begin{itemize}
+\item Estimator: from the random sample (capital letters). Estimate: from the observed sample (lowercase).
+\item Here $X$ is the number of successes in the $n$ trials.
+\item Recall: $S^2=\dfrac{1}{n-1}\displaystyle\sum_{i=1}^{n}(X_i-\Xbar)^2$.
+\end{itemize}
+\end{frame}
+
+% ======================================================================
+%% answers: a) xbar = 96/8 = 12 hours
+%%          b) s^2 = 28/7 = 4, s = 2 hours
+%%          c) phat = 3/8 = 0.375
+\begin{frame}[t]{}\fitO\exlists
+\textcolor{blue}{\textbf{Example 1:}}\,\ The lifetimes (in hours) of 8 randomly selected batteries are
+\begin{center}
+12 \quad 15 \quad 9 \quad 14 \quad 10 \quad 13 \quad 11 \quad 12
+\end{center}
+\begin{itemize}
+\item[a)] Find a point estimate of the mean lifetime $\mu$.\\[0.2cm]
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{}\fitO\exlists
+\begin{itemize}
+\item[b)] Find point estimates of $\sigma^2$ and $\sigma$.\\[3.6cm]
+\item[c)] Find a point estimate of the proportion $p$ of all batteries that last more than 12 hours.\\[0.2cm]
+\end{itemize}
+\end{frame}
+
+% ======================================================================
+\begin{frame}[t]{Unbiased Estimators}
+\begin{itemize}
+\item A point estimator $\thetahat$ is \keyterm{unbiased} if
+\[
+\textcolor{blue}{E(\thetahat)=\theta}\quad\text{for every value of }\theta.
+\]
+\item The \keyterm{bias} of $\thetahat$ is \ \textcolor{red}{$E(\thetahat)-\theta$}.
+\item[]
+\item Unbiased estimators we already know:
+  \begin{itemize}
+  \item $\Xbar$ for $\mu$, since $E(\Xbar)=\mu$;
+  \item $\hat{p}=X/n$ for $p$, since $E(X)=np$;
+  \item $S^2$ for $\sigma^2$. This is why $S^2$ divides by $n-1$.
+  \end{itemize}
+\item $S$ is \textbf{not} unbiased for $\sigma$, but its bias is small.
+\item Among unbiased estimators, prefer the one with the smallest variance.
+\end{itemize}
+\end{frame}
+
+% ======================================================================
+%% answers: a) E(th1)=mu, E(th2)=(mu+2mu+mu)/4=mu, E(th3)=2mu/3 -> th1, th2 unbiased; bias of th3 = -mu/3
+%%          b) V(th1)=sigma^2/3 ~ 0.333 sigma^2, V(th2)=(1+4+1)sigma^2/16=0.375 sigma^2 -> prefer th1 = Xbar
+\begin{frame}[t]{}\fitO\exlists
+\textcolor{blue}{\textbf{Example 2:}}\,\ Let $X_1,X_2,X_3$ be a random sample from a distribution
+with mean $\mu$ and variance $\sigma^2$. Consider
+{\small
+\[
+\thetahat_1=\frac{X_1+X_2+X_3}{3},\quad
+\thetahat_2=\frac{X_1+2X_2+X_3}{4},\quad
+\thetahat_3=\frac{X_1+X_2}{3}.
+\]}
+\begin{itemize}
+\item[a)] Which of these are unbiased estimators of $\mu$? Find the bias of any that are not.\\[2.6cm]
+\item[b)] Among the unbiased ones, which would you prefer? Why?\\[0.2cm]
+\end{itemize}
+\end{frame}
+
+\end{document}
