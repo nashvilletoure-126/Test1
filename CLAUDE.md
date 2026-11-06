@@ -34,3 +34,10 @@ filled/instructor-script versions, quizzes, or WebAssign.
 - Quizzes are printed handouts: black-and-white tables, no colour.
 - Beamer clips overflow silently, and trailing negative `\vspace*` pads hide it. Check the
   rendered pages, not just the log.
+
+## After class: replaying
+- After teaching, the user sometimes starts mentally replaying the class and wants to stop.
+  Don't review or analyse the class. Help them move to the next task.
+- What helps them: saying out loud each small step of what they are doing ("I'm opening
+  WebAssign", "I'm adding 5.37"). If the replay returns, they say "replaying" and repeat the
+  current step. Give short, plain step lines for the task at hand, one step at a time.
