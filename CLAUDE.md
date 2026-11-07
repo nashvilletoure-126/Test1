@@ -22,6 +22,11 @@ filled/instructor-script versions, quizzes, or WebAssign.
     (Screen Time web limits or LeechBlock).
   - What helps them: saying out loud what they're doing, the phone in another room, self-set
     early deadlines, and a tiny first step.
+- Replaying. The user replays classes they taught (and other past events) in their head, and
+  links it to a habit of rewatching YouTube videos (raised Nov 6-7, 2026). When they mention a
+  replay, answer briefly: name it, write any real fix as one line, then one small step back to
+  the current task. Their plan: no rewatching videos and autoplay off; after class, a 5-minute
+  slot to write two lines (one thing that went well, one to fix), then the class is done.
 
 ## Courses
 - STAT 3411 (Devore, "Stat" folders) and MATH 3101 (Financial Math, "26Fa_FinancialMath").
