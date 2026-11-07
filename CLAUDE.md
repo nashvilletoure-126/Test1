@@ -11,6 +11,17 @@ filled/instructor-script versions, quizzes, or WebAssign.
 - Don't interrupt. Work in the background: no pop-up windows, no apps brought to the
   front, no sound. In a browser, use one tab, read text instead of screenshots, mute
   and pause videos, and close your tabs at the end.
+- Distractions. The user wants to stop reflexively checking news (Chrome on phone/iPad),
+  WeChat, RedNote, Google Analytics, MathSciNet, YouTube Shorts and Wikipedia rabbit holes
+  (raised Nov 3-7, 2026). When they report one ("I checked X"), that is the whole message:
+  don't ask what they want or offer to look anything up. Answer in 1-3 short lines: no blame,
+  name the one current task, and give the next concrete step. Past sessions are readable with
+  the session tools (list_sessions / list_events) for what that task is.
+  - Already done: WeChat notifications off and Screen Time limit 0; Google Analytics blocked
+    in Mac Screen Time; phone moved to another room during work. Still open: block news sites
+    (Screen Time web limits or LeechBlock).
+  - What helps them: saying out loud what they're doing, the phone in another room, self-set
+    early deadlines, and a tiny first step.
 
 ## Courses
 - STAT 3411 (Devore, "Stat" folders) and MATH 3101 (Financial Math, "26Fa_FinancialMath").
